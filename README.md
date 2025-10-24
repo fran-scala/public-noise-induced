@@ -44,18 +44,27 @@ This project was developed with **Python 3.9.6**.
 Some libraries may use slightly older versions than current releases.
 
 1. Clone the repository:
-   ```bash
+   ```
+   bash
    git clone <repository_url>
    cd <repository_folder>```
 
 2. Create and activate a virtual environment:
-    ```python -m venv myenv
+    ```
+    python -m venv myenv
     source myenv/bin/activate        # On Linux or macOS
     myenv\Scripts\activate           # On Windows```
     
 3. Install dependencies:
     ```pip install -r requirements.txt```
 
+## Usage
+
+`noise_induced_equalization.ipynb` should be the first file to be executed, since it creates QFIMs that will be used by other files as well.
+
+Then `training_models.ipynb` and `generalization_bound.ipynb` can be executed. 
+
+Lastly `compare_opt_p.py`.
 
 
 ## License
