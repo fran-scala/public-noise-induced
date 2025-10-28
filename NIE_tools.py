@@ -44,10 +44,9 @@ def find_R_max(noise_values, gather_eigvs):
     R_list = []
     for i, p in enumerate(sorted(noise_values)):
         ## in case there is an eigenvalue that is exactly zero we substitute it with 1e-10 to avoid numerical issues
-        noiseless_eigvs = np.where(
-            np.array(gather_eigvs[0.0], dtype=np.float64) == 0.0,
-            1e-10,
-            gather_eigvs[0.0],
+       
+        noiseless_eigvs = np.fmax(
+            gather_eigvs[0.0], np.ones(np.array(gather_eigvs[0.0]).shape)*1e-10
         )
 
         increase = np.array(gather_eigvs[p], dtype=np.float64) / noiseless_eigvs
@@ -73,11 +72,12 @@ def I_r_trend_truncated(gather_eigvs, R_max, noise_values_plotting):
     std_increase = []
     for i, p in enumerate(noise_values_plotting):
         ## in case there is an eigenvalue that is exactly zero we substitute it with 1e-10 to avoid numerical issues
-        noiseless_eigvs = np.where(
-            np.array(gather_eigvs[0.0], dtype=np.float64) == 0.0,
-            1e-10,
-            gather_eigvs[0.0],
+
+        noiseless_eigvs = np.fmax(
+            gather_eigvs[0.0], np.ones(np.array(gather_eigvs[0.0]).shape)*1e-10
         )
+
+
         increase = np.array(gather_eigvs[p], dtype=np.float64) / noiseless_eigvs
 
         ## we truncate at R_max
