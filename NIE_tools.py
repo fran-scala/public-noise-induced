@@ -38,7 +38,7 @@ def gather_QFIMs_eigvals_diff_noise(noise_values, dataset, data_folder_overp):
     return gather_eigvs
 
 
-def find_R_max(noise_values, gather_eigvs):
+def find_R_max(noise_values, gather_eigvs, output_list=False):
     """## Determin R_max, the index separating the eigenvalues that can grow from the one that are supppressed"""
 
     R_list = []
@@ -61,6 +61,10 @@ def find_R_max(noise_values, gather_eigvs):
     R_max_list = np.max(R_array, axis=0)  ### take the highest index as a cutoff
     R_max_list = R_max_list.astype(int)
     R_max = int(round(np.min(R_max_list))) + 1
+
+    if output_list:
+        return R_max, R_max_list
+
     return R_max
 
 
