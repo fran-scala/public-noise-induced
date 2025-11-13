@@ -2,7 +2,8 @@
 
 [![Python Version](https://img.shields.io/badge/python-3.9.6-blue.svg)](https://www.python.org/downloads/release/python-396/)
 [![License](https://img.shields.io/badge/license-MIT-lightgrey.svg)](LICENSE)
-[![DOI](https://img.shields.io/badge/DOI-to_be_added-yellow.svg)](#)
+[![DOI](https://img.shields.io/badge/DOI-arXiv%3A2511.09428-yellow.svg)](https://doi.org/10.48550/arXiv.2511.09428)
+
 
 ## Overview
 
