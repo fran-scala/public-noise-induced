@@ -1,4 +1,4 @@
-# Improving Quantum Neural Networks Exploration by Noise-Induced Equalization
+# Noise-induced equalization in quantum learning models
 
 [![Python Version](https://img.shields.io/badge/python-3.9.6-blue.svg)](https://www.python.org/downloads/release/python-396/)
 [![License](https://img.shields.io/badge/license-MIT-lightgrey.svg)](LICENSE)
