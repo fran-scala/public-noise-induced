@@ -9,19 +9,20 @@
 
 This repository contains the code and notebooks accompanying the paper:
 
-**Improving Quantum Neural Networks Exploration by Noise-Induced Equalization**  
+**Noise-induced equalization in quantum learning models**  
 <u>Francesco Scala¹</u>, Giacomo Guarnieri², and Aurelien Lucchi¹  
 ¹ Department of Mathematics and Computer Science, University of Basel (Switzerland)  
 ² Dipartimento di Fisica "A. Volta," Università di Pavia, via Bassi 6, 27100 Pavia (Italy)
 
 ### Abstract
-Quantum noise can strongly affect quantum computation, limiting the performance of current quantum hardware.  
-Even variational quantum algorithms and quantum neural networks (QNNs) experience *noise-induced barren plateaus* at high noise levels.  
-However, a moderate amount of noise can improve generalization performance.
+Quantum noise is known to strongly affect quantum computation, thus potentially limiting the performance of currently available quantum processing units. 
+Even learning models based on variational quantum algorithms, which were designed to cope with the limitations of state-of-the art noisy hardware capabilities, are affected by noise-induced barren plateaus, arising when the noise level becomes too strong. 
+However, the generalization performances of such quantum machine learning algorithms can also be positively influenced by a proper level of noise, despite its generally detrimental effects. 
 
-This work proposes a pre-training procedure to determine the optimal quantum noise level that enhances the optimization landscape.  
-We show that an appropriate noise level induces a **Noise-Induced Equalization** of the variational parameters, analyzed through the **Quantum Fisher Information Matrix (QFIM)**.  
-Numerical simulations confirm that the region around this optimal equalization often yields improved generalization.
+Here, we propose a pre-training procedure to determine the quantum noise level leading to desirable optimization landscape properties. 
+We show that an optimized level of quantum noise induces an ‘equalization’ of the directions in the Riemannian manifold, flattening(/enhancing) the initially steep(/shallow) ones by redistributing sensitivity across its principal eigen-directions. 
+We analyze this noise-induced equalization through the lens of the quantum fisher information matrix, thus providing a recipe that allows to estimate the noise level inducing the strongest equalization. 
+We finally benchmark these conclusions with extensive numerical simulations providing evidence of the beneficial noise effects in the neighborhood of the best equalization, often leading to improved generalization.
 
 ---
 
